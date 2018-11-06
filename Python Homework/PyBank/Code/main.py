@@ -13,6 +13,7 @@ j = 0
 
 # Read in the CSV fileact
 with open(budgetData, 'r') as csvfile:
+
     csvreader = csv.reader(csvfile, delimiter=',')
 
     header = next(csvreader)
@@ -24,7 +25,7 @@ with open(budgetData, 'r') as csvfile:
             i = int(rows[1])
         else:
             j = int(rows[1])
-            change = j - ils
+            change = j - i
             i = j
             averageChange = averageChange + change
         if int(rows[1]) > grtInc:
@@ -37,8 +38,8 @@ with open(budgetData, 'r') as csvfile:
 averageChange = averageChange/int(months)
 print("Financial Analysis")
 print("----------------------------")
-print("Total Months: " + months)
-print("Total: $ " + totalMoney)
-print("Average  Change: $ " + averageChange)
-print("Greatest Increase in Profits: " + grtIncMon + grtInc)
-print("Greatest Decrease in Profits: " + grtDecMon + grtDec)
+print("Total Months: " + str(months))
+print("Total: $" + str(totalMoney))
+print("Average  Change: $" + str(averageChange))
+print("Greatest Increase in Profits: " + str(grtIncMon) + " $" + str(grtInc))
+print("Greatest Decrease in Profits: " + str(grtDecMon) + " $" + str(grtDec))

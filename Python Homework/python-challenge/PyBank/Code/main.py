@@ -36,6 +36,7 @@ with open(budgetData, 'r') as csvfile:
             grtDecMon = rows[0]
 
 averageChange = averageChange/int(months)
+
 print("Financial Analysis")
 print("----------------------------")
 print("Total Months: " + str(months))
@@ -43,3 +44,5 @@ print("Total: $" + str(totalMoney))
 print("Average  Change: $" + str(averageChange))
 print("Greatest Increase in Profits: " + str(grtIncMon) + " $" + str(grtInc))
 print("Greatest Decrease in Profits: " + str(grtDecMon) + " $" + str(grtDec))
+
+f=open('file.txt', 'w')

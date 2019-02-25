@@ -1,0 +1,104 @@
+<!--Welcome to Latitude Dashboard!-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTC-8">
+	<title>Latitude Dashboard</title>
+	<!-- Linking Bootstrap stylesheet-->
+	<!-- Latest compiled and minified CSS -->
+
+<script
+ src="https://code.jquery.com/jquery-3.2.1.min.js"
+ integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+ crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Latitude</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="data.html">Data</a></li>
+        <li><a href="comparisons.html">Comparison</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="max_temperature.html">Max Temperature</a></li>
+            <li><a href="humidity.html">Humidity</a></li>
+            <li><a href="cloudiness.html">Cloudiness</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="wind.html">Wind Speed</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container">
+	<div class="row">
+     <div class="col-md-1"></div>  
+	   <div class="col-md-6">
+      <h1>Summary:Latitude vs. X</h1>
+	    <img src="Images/Temperature.png" width="500px" height="400px">
+	    <p>The purpose of this project is to analysis how the weather changes as one travels closer to the equator. To accomplish our analysis, we used the Open Weather API and the CitiPy Python Library to randomly pull 500 cities from around the world to create our dataset. </p>
+	    <p>After we assembled our data, we used the Pandas and Matplotlib Python libraries to analyze our data set. Our four dependent variables were: max temperature, humidity, cloudiness, and wind speed. This dashboard shows the source data and the visualizations based on our four dependent variables. We also explain the trends that is shown in our visualizations</p> 
+     </div>    
+	   <div class="col-md-4 sidebar">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Visualizations</h1>
+          </div>
+        </div>
+       <div class="row">
+
+           <div class="col-md-4">    
+	           <a href="max_temperature.html">Max Temperature<img src="Images/Temperature.png" width="200px" height="150px"></a>
+          </div>
+          <div class="col-md-3"></div>
+        
+          <div class="col-md-4">  
+	           <a href="humidity.html">Humidity<img src="Images/Humidity.png" width="200px" height="150px"></a>
+          </div>
+          <div class="col-md-4"></div>  
+       </div>   
+       <div class ="row"> 
+          
+          <div class="col-md-4">  
+            <a href="cloudiness.html">Cloudiness<img src="Images/Cloudiness.png" width="200px" height="150px"></a>
+          </div>
+          <div class="col-md-3"></div>
+
+          <div class="col-md-4">     
+            <a href="wind.html">Wind Speed<img src="Images/Wind_Speed.png" width="200px" height="150px"></a>
+          </div>
+          <div class="col-md-4"></div>
+        </div>    
+     </div>         
+    <div class="col-md-1"></div>
+  </div>      
+</div>	 	
+</body>	
+<html>
